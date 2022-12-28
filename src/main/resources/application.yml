@@ -1,0 +1,39 @@
+server:
+  port: 8080
+
+### 接口文档配置
+swagger:
+  name: Demo Knife4j
+  appName: demo-knife4j
+  version: 0.0.1
+  description: Knife4j 4.0.0 测试
+  url: https://github.com/Charles7c/demo/knife4j
+  author:
+    name: Charles7c
+    email: charles7c@126.com
+    url: https://blog.charles7c.top/about/me
+  license:
+    name: Apache-2.0
+    url: https://github.com/Charles7c/demo-knife4j/blob/dev/LICENSE
+springdoc:
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan: com.example.controller
+# 增强配置
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+    swagger-model-name: 实体列表
+    enable-footer: false
+    enable-footer-custom: true
+    footer-custom-content: '[Apache-2.0](https://github.com/Charles7c/demo-knife4j/blob/dev/LICENSE) | Copyright � 2022-present [Demo Knife4j](https://github.com/Charles7c/demo-knife4j)'
